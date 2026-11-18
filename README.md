@@ -2,7 +2,9 @@
 
 Focus follows mouse for [AeroSpace](https://github.com/nikitabobko/AeroSpace). Rest the mouse on a window and it gets focus.
 
-AeroSpace has no focus-follows-mouse setting. This is a small helper that adds it. It needs no macOS permissions and uses no private APIs.
+> AeroSpace 0.21.0-Beta and later has this built in. Add `focus-follows-mouse.enabled = true` to `aerospace.toml` and try that first. This tool was written before the built-in option existed. It works on 0.20.3-Beta and 0.21.3-Beta, the two versions it was tested on, but don't run both at once.
+
+Before 0.21, AeroSpace had no focus-follows-mouse setting, and this small helper added one. It needs no macOS permissions and uses no private APIs.
 
 ## How it works
 
@@ -25,7 +27,7 @@ It leaves focus alone when:
 ## Requirements
 
 - macOS 13 or later
-- AeroSpace, running, with the `aerospace` CLI installed
+- AeroSpace, running, with the `aerospace` CLI installed (tested on 0.20.3-Beta and 0.21.3-Beta)
 - Xcode or the Command Line Tools, to build
 
 Without AeroSpace the tool does nothing: it exits with a message if it can't find the CLI, and logs an error on each window change if AeroSpace isn't running. If you don't use AeroSpace, try [AutoRaise](https://github.com/sbmpost/AutoRaise), which handles regular macOS windows.
